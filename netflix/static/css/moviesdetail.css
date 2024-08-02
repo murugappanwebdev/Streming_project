@@ -1,0 +1,60 @@
+.header {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),url(https://ichef.bbci.co.uk/images/ic/1200x675/p028d8s6.jpg);
+    background-size: cover;
+    background-position: center;  
+    background-repeat: no-repeat; 
+    padding: 10px 8%;
+    position: relative;
+}
+.heropage{
+    position: absolute;
+    color: antiquewhite;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+.inside-heropage{
+    line-height: 1.2;
+}
+.inside-heropage h1{
+    font-size: 40px;
+}
+.inside-heropage p{
+    font-size: 17px;
+}
+span{
+    color: aqua;
+    font-weight: bold;
+}
+.line1{
+    height: 2px;
+    color: rgba(18,241,241);
+    width: 12%;
+    margin-left: 0px;
+    margin-top: 0px;
+    position: absolute;
+}
+.poster{
+    margin-top: 130px;
+    margin-right: 150px;
+}
+.poster img{
+    height: 320px;
+    float: right;
+    border-radius: 10px; 
+}
+.btn1{
+    margin-top: 30px;
+}
+.btn1 a{
+    text-decoration: none;
+    color: white;
+    padding: 10px 25px;
+    background: teal;
+    border-radius: 20px;
+}
+.btn1 a:hover{
+    background: black;
+    color: teal;
+}

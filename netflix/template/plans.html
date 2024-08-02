@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Plans</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            text-align: center;
+            margin: 50px auto;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .plans {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .plan {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            text-align: left;
+        }
+
+        .plan h2 {
+            color: #e50914;
+        }
+
+        .plan .price {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .plan p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Choose the plan that's right for you</h1>
+        <div class="plans">
+            {% for plan in plans %}
+            <div class="plan">
+                <h2>{{ plan.name }}</h2>
+                <p>{{ plan.description }}</p>
+                <p class="price">₹{{ plan.price }}</p>
+                <a href="{% url 'payment' plan.id plan.price %}">Choose Plan</a><hr>
+                <p>Video and sound quality</p>
+                <p><strong>{{ plan.quality }}</strong></p><hr>
+                <p>Resolution</p>
+                <p><strong>{{ plan.resolution }}</strong></p><hr>
+                <p>Supported devices</p>
+                <p><strong>{{ plan.devices }}</strong></p><hr>
+                <p>Devices your household can watch at the same time: <strong>{{ plan.simultaneous_streams }}</strong></p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

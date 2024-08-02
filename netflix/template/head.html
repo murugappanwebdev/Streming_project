@@ -1,0 +1,175 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="shortcut icon" href="{% static 'images/icon.png' %}" type="image/x-icon">
+  <title>Streamia</title>
+  <link rel="stylesheet" href="{% static 'css/header.css' %}">
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  font-family: 'Poppins', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+nav{
+  z-index: 99;
+  width: 100%;
+  background: transparent;
+}
+nav .wrapper{
+  position: relative;
+  max-width: 1300px;
+  margin-left: 1000px;
+  height: 70px;
+  line-height: 70px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  white-space: nowrap;
+}
+.wrapper .logo a{
+  color: #f2f2f2;
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.wrapper .nav-links{
+  display: inline-flex;
+  margin-left: 720px;
+}
+.nav-links li{
+  list-style: none;
+}
+.nav-links li a{
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  margin-right: 30px;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 9px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.nav-links li a:hover{
+  background: red;
+  color: white;
+  width: fit-content;
+}
+.nav-links .mobile-item{
+  display: none;
+}
+.nav-links .drop-menu{
+  position: absolute;
+  background: #000000;
+  width: 180px;
+  text-transform: capitalize;
+  line-height: 45px;
+  top: 85px;
+  opacity: 0;
+  visibility: hidden;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
+.nav-links li:hover .drop-menu,
+.nav-links li:hover .mega-box{
+  transition: all 0.3s ease;
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+}
+.drop-menu li a{
+ 
+  display: block;
+  padding: 0 0 0 15px;
+  font-weight: 400;
+  border-radius: 0px;
+  
+  
+}
+.mega-box{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 0 30px;
+  top: 85px;
+  opacity: 0;
+  visibility: hidden;
+}
+.mega-box .content{
+  background: #070707;
+ 
+  display: flex;
+  margin-left: 300px;
+  white-space: nowrap;
+  justify-content: space-between;
+  width: 60%;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
+.mega-box .content .row{
+  line-height: 45px;
+}
+
+.content .row header{
+  color: #f2f2f2;
+  font-size: 20px;
+  font-weight: 500;
+}
+.content .row .mega-links{
+  margin-left: -40px;
+  border-left: 1px solid rgba(255,255,255,0.09);
+}
+.row .mega-links li{
+  padding: 0 20px;
+}
+.row .mega-links li a{
+ 
+  color: #d9d9d9;
+  font-size: 17px;
+  display: block;
+}
+.row .mega-links li a:hover{
+  color: #0a0a0a;
+}
+.wrapper .btn{
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+.wrapper .btn.close-btn{
+  position: absolute;
+  right: 30px;
+  top: 10px;
+}
+
+
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="wrapper">
+      <ul class="nav-links">
+        <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+        <li><a href="/home">Home</a></li>
+        <li>
+          <a href="/movie" class="desktop-item">Movies</a>
+
+        <li><a href="/plans">Subscribe Now</a></li>
+        <li>
+        <li><a href="/out">Sign Out</a></li>
+        <li>    
+        </li>
+      </ul>
+    
+    </div>
+  </nav>
+</body>
+</html>

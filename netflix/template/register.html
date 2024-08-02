@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/loginandregister.css' %}">
+    <link rel="stylesheet" href="{% static 'image/assets/bg.jpg' %}">
+    <title>BOOKINGS</title>
+</head>
+<body>
+    <div class="ring">
+        <i style="--clr:#00ff0a;"></i>
+        <i style="--clr:#ff0057;"></i>
+        <i style="--clr:#fffd44;"></i>
+        <div class="login">
+          <h2>Register</h2>
+          <form method="POST">
+            {% if err %}
+                <div style="color: antiquewhite;">
+                 {{err}}
+                 </div>
+                 {% endif %}
+            {% csrf_token %}
+          <div class="inputBx">
+            <input type="text" placeholder="Username" name="uname">
+          </div>
+          <br>
+          <div class="inputBx">
+            <input type="email" placeholder="Email" name="email">
+          </div>
+          <br>
+          <div class="inputBx">
+            <input type="password" placeholder="Password" name="upass">
+          </div>
+          <br>
+          <div class="inputBx">
+            <input type="password" placeholder="confirm Password" name="ucpass">
+          </div>
+          <br>
+          <div class="inputBx">
+            <input type="submit" value="Create Account">
+          </div>
+        </form>
+          <div class="links">
+            <a href="#">Forget Password</a>
+            <a href="/log">Signin</a>
+          </div>
+        </div>
+      </div>
+   

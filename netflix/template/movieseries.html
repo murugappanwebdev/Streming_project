@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streamia Movies</title>
+    <link rel="stylesheet" href="{% static 'css/moviedetail.css' %}">
+</head>
+<style>
+    .header {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),url("{{ movies.cover_image.url }}");
+    background-size: cover;
+    background-position: center;  
+    background-repeat: no-repeat; 
+    padding: 10px 8%;
+    position: relative;
+}
+.heropage{
+    position: absolute;
+    color: antiquewhite;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+.inside-heropage{
+    line-height: 1.2;
+}
+.inside-heropage h1{
+    font-size: 40px;
+}
+.inside-heropage p{
+    font-size: 17px;
+}
+span{
+    color: aqua;
+    font-weight: bold;
+}
+.line1{
+    height: 2px;
+    color: rgba(18,241,241);
+    width: 12%;
+    margin-left: 0px;
+    margin-top: 0px;
+    position: absolute;
+}
+.poster{
+    margin-top: 130px;
+    margin-right: 150px;
+}
+.poster img{
+    height: 320px;
+    float: right;
+    border-radius: 10px; 
+}
+.btn1{
+    margin-top: 30px;
+}
+.btn1 a{
+    text-decoration: none;
+    color: white;
+    padding: 10px 25px;
+    background: teal;
+    border-radius: 20px;
+}
+.btn1 a:hover{
+    background: black;
+    color: teal;
+}
+</style>
+<body>
+    <header class="header">
+    <section>
+        <div class="buy">
+        <div class="heropage">
+          <div class="inside-heropage">
+            <span>NOW STREAMING</span>
+            <div class="line1"></div>
+            <h1>{{ cinema.title }}</h1>
+            <p>{{ cinema.description }}</p>
+            <div class="btn1">
+              <a href="{% url 'homevideo' cinema.id %}"><i class="fas-fa-play"></i>Watch Now</a>
+              <a href=""><i class="fas-fa-heart"></i>Watch Later</a>
+            </div>
+          </div>
+        </div>
+        <div class="poster">
+          <img src="{{ cinema.cover_image.url }}" alt="">
+      </div>
+      </section>
+    </div>
+</div>
+</header>
+
+</body>
+</html>
+<!-- <div class="box">
+    <div class="imgBx">
+        <img src="{{ movie.cover_image.url }}" class="card-img-top" alt="Movie Image">
+    </div>
+    <div class="content">
+        <div>
+            <h2 class="card-title">{{ movie.title }}</h2>
+            <p>genre: {{ movie.get_genre_display }}</p>
+            <p>cast: ${{ movie.cast }}</p>
+            <p>{{ movie.description }}</p>
+            <a href="" style="text-decoration: none;">
+                <p>Movies Details</p>
+            </a>
+        </div>
+
+    </div>
+</div> -->

@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+{% block content %}
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streamia Movies</title>
+    <link rel="stylesheet" href="{% static 'css/movie.css' %}">
+</head>
+<body style="background-color: black; color: whitesmoke;">
+    <div class="full-screen">
+        <video src="{% static 'image\Assets\snow.mp4' %}" autoplay control loop></video>
+        <div class="video-overlay-text">
+            <p>Art is the mirror that reflects our souls, revealing the colors of our deepest desires</p>
+            <a href=""><i class="btn1">Watch Now</a></i>
+        </div>
+    </div>
+  <br>
+  <h1>Violent movies</h1>
+  <div class="container">
+    {% for movie in Violent_movies %}
+    <a href="{% url 'about_detail' movie.id %}">
+    <div class="box">
+        <div class="imgBx">
+            <img src="{{ movie.cover_image.url }}" class="card-img-top" alt="Movie Image">
+        </div>
+        <div class="content">
+            <div>
+                <h2 class="card-title">{{ movie.title }}</h2>
+                <p>genre: {{ movie.get_genre_display }}</p>
+                <p>cast: ${{ movie.cast }}</p>
+                <!-- <p>{{ movie.description }}</p> -->
+                <a href="" style="text-decoration: none;">
+                    <p>Movies Details</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    </a>
+
+  {% endfor %}
+  </div>
+  <br>
+  <h1>Crime Action</h1>
+  <div class="container">
+    {% for movie in Crime_action %}
+    <a href="{% url 'about_detail' movie.id %}">
+    <div class="box">
+        <div class="imgBx">
+            <img src="{{ movie.cover_image.url }}" class="card-img-top" alt="Movie Image">
+        </div>
+        <div class="content">
+            <div>
+                <h2 class="card-title">{{ movie.title }}</h2>
+                <p>genre: {{ movie.get_genre_display }}</p>
+                <p>cast: ${{ movie.cast }}</p>
+                <!-- <p>{{ movie.description }}</p> -->
+                <a href="" style="text-decoration: none;">
+                    <p>Movies Details</p>
+            
+            </div>
+        </div>
+    </div>
+    </a>
+  {% endfor %}
+  </div>
+  <br>
+  <h1>Epics</h1>
+  <div class="container">
+    {% for movie in Epics %}
+    <a href="{% url 'about_detail' movie.id %}">
+    <div class="box">
+        <div class="imgBx">
+            <img src="{{ movie.cover_image.url }}" class="card-img-top" alt="Movie Image">
+        </div>
+        <div class="content">
+            <div>
+                <h2 class="card-title">{{ movie.title }}</h2>
+                <p>genre: {{ movie.get_genre_display }}</p>
+                <p>cast: ${{ movie.cast }}</p>
+                <!-- <p>{{ movie.description }}</p> -->
+                <a href="" style="text-decoration: none;">
+                    <p>Movies Details</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    </a>
+  {% endfor %}
+  </div>
+  <br>
+  <h1>Only on Streamia</h1>
+  <div class="container">
+    {% for movie in Only_on_Streamia %}
+    <a href="{% url 'about_detail' movie.id %}">
+    <div class="box">
+        <div class="imgBx">
+            <img src="{{ movie.cover_image.url }}" class="card-img-top" alt="Movie Image">
+        </div>
+        <div class="content">
+            <div>
+                <h2 class="card-title">{{ movie.title }}</h2>
+                <p>genre: {{ movie.get_genre_display }}</p>
+                <p>cast: ${{ movie.cast }}</p>
+                <!-- <p>{{ movie.description }}</p> -->
+                <a href="" style="text-decoration: none;">
+                    <p>Movies Details</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    </a>
+  {% endfor %}
+  </div>
+  <br>
+  <h1>Sci Fi Films</h1>
+  <div class="container">
+    {% for movie in Sci_Fi_Films %}
+    <a href="{% url 'about_detail' movie.id %}">
+    <div class="box">
+        <div class="imgBx">
+            <img src="{{ movie.cover_image.url }}" class="card-img-top" alt="Movie Image">
+        </div>
+        <div class="content">
+            <div>
+                <h2 class="card-title">{{ movie.title }}</h2>
+                <p>genre: {{ movie.get_genre_display }}</p>
+                <p>cast: ${{ movie.cast }}</p>
+                <!-- <p>{{ movie.description }}</p> -->
+                <a href="" style="text-decoration: none;">
+                    <p>Movies Details</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    </a>
+  {% endfor %}
+  </div>
+
+</body>
+</html>
+{% endblock %} 
+

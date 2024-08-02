@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-image: url(https://images.pexels.com/photos/2925322/pexels-photo-2925322.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover;
+    color: white;
+}
+.overlay {
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    text-align: center;
+}
+.message-box {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+    margin: 20px;
+}
+.message-box h2 {
+    margin-top: 0;
+}
+
+.message-box button {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+.message-box button:hover {
+    background-color: #f40612;
+}
+.language-selector button {
+    background: none;
+    border: 1px solid #999;
+    color: #999;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.language-selector button:hover {
+    color: white;
+    border-color: white;
+}
+
+.sign-in-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.sign-in-button:hover {
+    background-color: #f40612;
+}
